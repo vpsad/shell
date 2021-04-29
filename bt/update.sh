@@ -108,7 +108,7 @@ kill $(ps aux|grep -E "task.pyc|main.py"|grep -v grep|awk '{print $2}')
 /etc/init.d/bt start
 echo 'True' > /www/server/panel/data/restart.pl
 pkill -9 gunicorn &
-echo -e "\033[31m VPS博客 | www.vpsad.cn \033[0m"  
+echo -e "\033[31m VPS博客 | www.vpsad.cn | QQ群：613980114 \033[0m"  
 echo "已成功升级到[$version]企业版";
 echo -e "\033[31m已经安装完毕，欢迎使用！ \033[0m"  
 
