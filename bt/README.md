@@ -26,22 +26,32 @@
 宝塔Linux面板7.5.2
 宝塔Linux面板7.5.2版本是基于Centos/Debian/Ubuntu开发的，为了最好的兼容性，请使用以上系统
 
-注明:
+## 注明:
 帅哥版 只是让你变帅一时
 在安装完帅哥版后 请务必24小时内删除
 帅哥版属于学术研究，不得正式使用
 如果你快乐了，就请支持一下宝塔www.bt.cn团队，开发不易
 宝塔面板 7.5.2 安装命令
-Centos安装命令：根据系统执行框内命令开始安装（大约2分钟完成面板安装）
+### Centos安装命令：根据系统执行框内命令开始安装（大约2分钟完成面板安装）
+
 yum install -y wget && wget -O install.sh https://www.05bt.com/install/install_6.0.sh && sh install.sh
-Ubuntu/Deepin安装命令：极速安装方式 (安装时间1至10分钟)
+
+### Ubuntu/Deepin安装命令：极速安装方式 (安装时间1至10分钟)
+
 wget -O install.sh https://www.05bt.com/install/install-ubuntu_6.0.sh && sudo bash install.sh
-Debian安装命令：极速安装方式 (安装时间1至10分钟)
+
+### Debian安装命令：极速安装方式 (安装时间1至10分钟)
+
 wget -O install.sh https://www.05bt.com/install/install-ubuntu_6.0.sh && sudo install.sh
-Fedora安装命令：极速安装方式 (安装时间1至10分钟)
+
+### Fedora安装命令：极速安装方式 (安装时间1至10分钟)
+
 yum install -y wget && wget -O install.sh https://www.05bt.com/install/install_6.0.sh && bash install.sh
-已经安装面板
+
+## 已经安装面板
 Linux面板7.5.2升级命令：极速安装方式 (安装时间1至10秒)
+
 curl https://www.05bt.com/install/update6.sh|bash
+
 Nginx和Apache防火墙脚本
 直接面板安装防火墙使用
