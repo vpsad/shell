@@ -36,19 +36,19 @@
 宝塔面板 7.5.2 安装命令
 ### Centos安装命令：根据系统执行框内命令开始安装（大约2分钟完成面板安装）
 
-`yum install -y wget && wget -O install.sh http://cdn.jsdelivr.net/gh/vpsad/shell/bt/install.sh && sh install.sh`
+`yum install -y wget && wget -O install.sh http://cdn.jsdelivr.net/gh/vpsad/shell/bt/install.sh && sh install.sh 8ee72501`
 
 ### Ubuntu/Deepin安装命令：极速安装方式 (安装时间1至10分钟)
 
-`wget -O install.sh http://cdn.jsdelivr.net/gh/vpsad/shell/bt/install-ubuntu.sh && sudo bash install.sh`
+`wget -O install.sh http://cdn.jsdelivr.net/gh/vpsad/shell/bt/install-ubuntu.sh && sudo bash install.sh 8ee72501`
 
 ### Debian安装命令：极速安装方式 (安装时间1至10分钟)
 
-`wget -O install.sh http://cdn.jsdelivr.net/gh/vpsad/shell/bt/install-ubuntu.sh && sudo install.sh`
+`wget -O install.sh http://cdn.jsdelivr.net/gh/vpsad/shell/bt/install-ubuntu.sh && sudo install.sh 8ee72501`
 
 ### Fedora安装命令：极速安装方式 (安装时间1至10分钟)
 
-`yum install -y wget && wget -O install.sh http://cdn.jsdelivr.net/gh/vpsad/shell/bt/install.sh && bash install.sh`
+`yum install -y wget && wget -O install.sh http://cdn.jsdelivr.net/gh/vpsad/shell/bt/install.sh && bash install.sh 8ee72501`
 
 ## 已经安装面板
 Linux面板7.5.2升级命令：极速安装方式 (安装时间1至10秒)
