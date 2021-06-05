@@ -28,6 +28,7 @@ EOF
 
 rpm -ivh https://cdn.jsdelivr.net/gh/vpsad/shell/server/kernel-3.10.0-693.5.2.tcpa06.tl2.x86_64.rpm --force
 echo "内核安装完毕,3秒后将自动重启..."
-echo "重启后安装自动完成,lsmod|grep tcpa查看是否开启成功."
+echo "重启后安装自动完成，重启后使用 "lsmod|grep tcpa" 查看是否开启成功."
+echo "By VPS博客二次修改优化 | www.vpsad.cn"
 sleep 3
 reboot
