@@ -62,7 +62,7 @@ out0 b "添加sysbench脚本\n"
 while [ 1 -eq 1 ];do
 out1 y "-------------------------------\n"
 out1 y "|"
-out0 y " VPS博客 | www.vpsad.cn   "
+out0 y " VPS博客 | www.vpsad.cn      "
 out1 y "|\n"
 out1 y "|"
 out1 b " 1. bench.sh                 "
