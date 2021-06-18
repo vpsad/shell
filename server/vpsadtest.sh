@@ -281,7 +281,7 @@ case $id in
         out0 p "清理完成\n"
         ;;
     17)
-        curl https://cdn.jsdelivr.net/gh/vpsad/shell/server/vpsad.sh|bash
+        wget https://cdn.jsdelivr.net/gh/vpsad/shell/server/vpsad.sh && bash vpsad.sh
 	break
         ;;
     *)
