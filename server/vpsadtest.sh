@@ -56,7 +56,7 @@ out0 () {
 # if [ ! $# -eq 0 ];then
 #     id=$1
 # fi
-out0 s "使用方法: curl https://cdn.jsdelivr.net/gh/vpsad/shell/server/vpsadtesttest.sh|bash"
+out0 s "使用方法: wget https://cdn.jsdelivr.net/gh/vpsad/shell/server/vpsadtesttest.sh && bash"
 out0 r "7,4 已修复，请清空残余文件后使用\n"
 out0 b "添加sysbench脚本\n"
 while [ 1 -eq 1 ];do
