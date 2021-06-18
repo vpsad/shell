@@ -56,13 +56,13 @@ out0 () {
 # if [ ! $# -eq 0 ];then
 #     id=$1
 # fi
-out0 s "使用方法: wget https://cdn.jsdelivr.net/gh/vpsad/shell/server/vpsadtest.sh && bash vpsadtest.sh"
+out0 s "使用方法: wget https://cdn.jsdelivr.net/gh/vpsad/shell/server/vpsadtest.sh && bash vpsadtest.sh \n"
 out0 r "7,4 已修复，请清空残余文件后使用\n"
 out0 b "添加sysbench脚本\n"
 while [ 1 -eq 1 ];do
 out1 y "-------------------------------\n"
 out1 y "|"
-out0 y " VPS博客 | www.vpsad.cn      "
+out0 y " VPS博客 | www.vpsad.cn         "
 out1 y "|\n"
 out1 y "|"
 out1 b " 1. bench.sh                 "
