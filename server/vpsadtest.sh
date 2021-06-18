@@ -62,7 +62,7 @@ out0 b "添加sysbench脚本\n"
 while [ 1 -eq 1 ];do
 out1 y "-------------------------------\n"
 out1 y "|"
-out0 y " 请选择需要测试的脚本序号:   "
+out0 y " VPS博客 | www.vpsad.cn   "
 out1 y "|\n"
 out1 y "|"
 out1 b " 1. bench.sh                 "
@@ -113,9 +113,13 @@ out1 y "|"
 out1 r " 16.卸载kos                  "
 out1 y "|\n"
 out1 y "|"
+out1 r " 17.VPS博客脚本集合           "
+out1 y "|\n"
+out1 y "|"
 out1 r " 0. 退出                     "
 out1 y "|\n"
 out1 y "-------------------------------\n"
+out0 y " 请选择需要测试的脚本序号:   "
 read id
 case $id in
     0)
@@ -275,6 +279,10 @@ case $id in
         rm -rf ${HOME}/superbench_log
         clear
         out0 p "清理完成\n"
+        ;;
+    17)
+        curl https://cdn.jsdelivr.net/gh/vpsad/shell/server/vpsad.sh|bash
+	break
         ;;
     *)
         clear
