@@ -1,6 +1,5 @@
 #!/bin/bash
 #全局变量
-down_url=https://down.gacjie.cn
 panel_path=/www/server/panel
 #清理垃圾
 cleaning_garbage(){
@@ -291,9 +290,9 @@ main(){
     clear
 	echo -e "
 |===================================================|
-|  VPS博客：            https://www.vpsad.cn/       |
-|  脚本版本：           V1.0.1                      |
-|  QQ交流群：           \033[1;31m613980114\033[0m                   |
+|  VPS博客：            \033[1;35mhttps://www.vpsad.cn\033[0m        |
+|  脚本版本：           \033[1;32mvpsad_LinuxToolsV1.0.1\033[0m      |
+|  \033[1;31mQQ交流群：           613980114\033[0m                   |
 |  问题反馈：           去博客或QQ群找帅哥博主      |
 |--------------------[官方宝塔]---------------------|
 |(1)CentOS系统安装官方宝塔                          |
