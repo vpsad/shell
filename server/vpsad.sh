@@ -1,6 +1,14 @@
 #!/bin/bash
+#
+# Copyright (C) 2019 - 2021 PT <zbxhhzj@qq.com>
+#
+# QQ Group: 613980114
+#
+# URL: https://www.vpsad.cn/
+#
 #全局变量
 panel_path=/www/server/panel
+Green="\033[32m" && Red="\033[31m" && Blue="\033[34m" && Font="\033[0m"
 #清理垃圾
 cleaning_garbage(){
     rm -f /www/server/panel/*.pyc
@@ -127,15 +135,6 @@ Setup_Count(){
 Setup_Count ${IDC_CODE}
 cp /root/config.json /www/server/panel/config/config.json 
 rm -f /root/config.json
-#宝塔磁盘挂载
-mount_disk(){
-	echo -e "注意：本工具会将数据盘挂载到www目录。5秒后跳转到挂载脚本。"
-    sleep 5s
-	wget -O auto_disk.sh http://download.bt.cn/tools/auto_disk.sh && bash auto_disk.sh
-	rm -rf /auto_disk.sh
-    rm -rf auto_disk.sh
-    back_home
-}
 #封装工具
 package_btpanel(){
     clear
@@ -197,6 +196,7 @@ format_disk(){
     stop_btpanel
     umount /dev/vdb
     mkfs.ext4 /dev/vdb
+	back_home
 }
 
 #返回首页
@@ -301,14 +301,17 @@ bt_mggz(){
 #BBR一键脚本
 bbryj(){
     wget -N --no-check-certificate "https://cdn.jsdelivr.net/gh/vpsad/shell/server/tcpplus.sh" && chmod +x tcpplus.sh && ./tcpplus.sh
+	back_home
 }
 #回程路由可视化
 kshhc(){
     curl https://cdn.jsdelivr.net/gh/vpsad/shell/server/line_test.sh|bash
+	back_home
 }
 #奈飞检测脚本
 nfipjc(){
     wget -O nf https://cdn.jsdelivr.net/gh/vpsad/shell/server/nf && chmod +x nf && clear && ./nf
+	back_home
 }
 
 # 退出脚本
@@ -320,43 +323,27 @@ delete(){
 }
 main(){
     clear
-	echo -e "
-|===================================================|
-|  VPS博客：            \033[1;35mhttps://www.vpsad.cn\033[0m        |
-|  脚本版本：           \033[1;32mvpsad_LinuxTools V1.0.2\033[0m     |
-|  \033[1;31mQQ交流群：           613980114\033[0m                   |
-|  问题反馈：           去博客或QQ群找\033[1;34m帅哥\033[0m博主      |
-|--------------------[官方宝塔]---------------------|
-|(1)Linux安装官方宝塔                               |
-|(2)宝塔一键升级                                    |
-|(3)官方一键挂载数据盘工具(请在安装宝塔前挂载)      |
-|--------------------[实用工具]---------------------|
-|(4)去除宝塔强制登录                                |
-|(5)清理垃圾[清理系统以及面板产生的缓存垃圾]        |
-|(6)修复环境[安装升级宝塔lnmp的环境只支持centos7]   |
-|(7)清理残留[清理官方和破解版的文件残留并修复面板]  |
-|(8)卸载面板[本功能会清空所有数据卸载网站环境]      |
-|(9)封装工具[高级功能不懂的不要执行以免数据丢失]    |
-|(10)停止服务[停止面板LNMP,Redis,Memcached服务]     |
-|(11)一键挂载磁盘[VPS博客魔改，支持自定义目录]      |
-|(qk)清空数据盘[解决重装系统不清空数据盘,重装前使用]|
-|(kr)普通版转酷锐面板[酷锐云宝塔联合定制版]         |
-|--------------------[降级版本]---------------------|
-|(old)安装老版本宝塔(降级可能失败，请先备份数据！)  |
-|注意:由于7.4.2有安全漏洞仅用于学习生产环境禁止使用 |
-|手动升级包下载地址：https://www.vpsad.cn/1.html    |
-|--------------------[离线宝塔]---------------------|
-|(20)开启完全离线服务     (21)关闭完全离线服务      |
-|注意:离线功能会完全断开与宝塔的通讯部分功能无法使用|
-|因此请在部署完网站后开启离线，如需安装插件关闭即可.|
-|--------------------[其他功能]---------------------|
-|(bbr)BBR一键脚本       (hc)回程路由可视化          |
-|(nf)奈飞检测脚本       (0)退出脚本                 |
-|--------------------[广告赞助]---------------------|
-|酷锐云=>香港美国稳定回程GIA服务器=> yun.kuruiit.com|
-|赞助我们：https://www.vpsad.cn/money               |
-|===================================================|
+	echo -e "        VPS博客Linux工具箱脚本 ${Red}[v1.0.3]${Font}
+-- By ${Red}VPS博客${Font} | ${Green}www.vpsad.cn${Font} | ${Blue}QQ群：613980114${Font} --
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+${Green}1.${Font}Linux安装官方宝塔        ${Green}2.${Font}宝塔一键升级  
+${Green}3.${Font}官方一键挂载数据盘工具(请在安装宝塔前挂载)
+${Green}4.${Font}去除宝塔强制登录         ${Green}5.${Font}清理垃圾                         
+${Green}6.${Font}修复环境[只支持c7]       ${Green}7.${Font}清理残留[清理修复面板] 
+${Green}8.${Font}卸载面板[清空数据]       ${Green}9.${Font}封装工具[不懂不要执行]
+${Green}10.${Font}停止服务[停止宝塔]      ${Green}11.${Font}挂载磁盘[自定义目录]    
+${Green}qk.${Font}清空数据盘[重装前使用]  ${Green}kr.${Font}普通版转酷锐面板 
+${Green}old.${Font}安装老版本宝塔[降级可能失败，请先备份数据!]
+${Green}20.${Font}开启完全离线服务        ${Green}21.${Font}关闭完全离线服务
+${Green}bbr.${Font}BBR一键脚本            ${Green}hc.${Font}回程路由可视化
+${Green}nf.${Font}奈飞检测脚本
+${Red}输入p+数字选页，目前共一页。${Font}
+输入 ${Red}0${Font} 退出脚本 
+ˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇˇ
+\033[1;35m酷锐云 | 香港美国稳定回程GIA服务器 => yun.kuruiit.com\033[0m
+广告赞助请加QQ群613980114联系群主
 	"
+
 	read -p "请输入需要输入的选项:" function
 	case $function in
 	1)  bt_official
