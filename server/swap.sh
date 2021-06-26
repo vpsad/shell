@@ -64,10 +64,11 @@ main(){
 root_need
 ovz_no
 clear
+echo -e "-- By ${Red}VPS博客${Font} | ${Green}www.vpsad.cn${Font} | ${Red}QQ群：613980114${Font} --"
 echo -e "———————————————————————————————————————"
 echo -e "${Green}Linux VPS一键添加/删除swap脚本${Font}"
-echo -e "${Green}1、添加swap${Font}"
-echo -e "${Green}2、删除swap${Font}"
+echo -e "${Green}1.${Font}添加swap"
+echo -e "${Green}2.${Font}删除swap"
 echo -e "———————————————————————————————————————"
 read -p "请输入数字 [1-2]:" num
 case "$num" in
